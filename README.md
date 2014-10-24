@@ -1,8 +1,6 @@
------------------------
-Word Search Puzzle
------------------------
 
-Author: Maxim Kukhtenkov
+Word Search Puzzle
+------------------
 
 Popular algorithms/programming exercise.
 
@@ -12,11 +10,11 @@ The program prompts the user to enter the dimensions of the grid, which contains
 
 In non-wrap mode the puzzle works like the regular word puzzle: only the words inside the grid are searched.
 
-In a wrap mode if the word hits the border it continues on the other side of the grid. FOr example:
+In a wrap mode if the word hits the border it continues on the other side of the grid. For example:
 
-A B C
-D E F
-G H I
+A B C        
+D E F         
+G H I          
 
 If we chose the wrap mode and try to search for ABCAB the program will find the word and will output the following coordinates: (0, 0), (0, 1). 
 
