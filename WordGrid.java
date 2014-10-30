@@ -46,10 +46,16 @@ public class WordGrid {
 
 	void displayGrid() {
 		System.out.println("-----------------\n   Word Puzzle   \n-----------------\n");
-		for (int y = 0; y < maxRowCount; y++) {
+		String colCount = " \t";
+		for (int y = 1; y < maxColCount + 1; y++){
+			colCount += y;
+			colCount += " ";
+		}
+		System.out.println(colCount + "\n");
+		for (int y = 1; y < maxRowCount + 1; y++) {
 			System.out.print(y + "\t");
 			for (int x = 0; x < maxColCount; x++) {
-				System.out.print(letters[y][x].value + " ");
+				System.out.print(letters[y-1][x].value + " ");
 			}
 			System.out.println();
 		}
@@ -97,7 +103,7 @@ public class WordGrid {
 				
 		
 		if (wordFound) {
-			System.out.println("(" + startX + ", " + startY + "), (" + endX + ", " + endY + ")");
+			System.out.println("(" + (startX +1) + ", " + (startY +1) + "), (" + (endX+1) + ", " + (endY+1) + ")");
 		} 
 		else {
 			System.out.println("Not Found");
